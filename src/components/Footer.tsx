@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and description */}
           <div className="text-right">
-            <h3 className="text-2xl font-bold text-soft-blue mb-4">וויסטמאַסטער</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-soft-blue mb-4">אליס פינוי פסולת ושינוע בע"מ</h3>
             <p className="text-sm text-gray-300">
               פתרונות מתקדמים לפינוי פסולת וניהול משאבים סביבתיים למגזר העסקי והתעשייתי
             </p>
@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="text-right">
             <h4 className="text-lg font-bold mb-4 text-white">צור קשר</h4>
             <div className="flex items-center mb-2 justify-end">
-              <span className="text-gray-300">info@wastemaster.co.il</span>
+              <span className="text-gray-300">info@alistipper.co.il</span>
               <Mail className="w-5 h-5 text-soft-blue mr-2" />
             </div>
             <div className="flex items-center mb-2 justify-end">
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} וויסטמאַסטער. כל הזכויות שמורות.</p>
+          <p>© {new Date().getFullYear()} אליס פינוי פסולת ושינוע בע"מ. כל הזכויות שמורות.</p>
         </div>
       </div>
     </footer>
