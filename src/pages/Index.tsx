@@ -4,8 +4,11 @@ import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import ScrollReveal from '@/components/ScrollReveal';
 import { Trash2, Recycle, Factory, Building, ArrowRight } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
+  const isMobile = useIsMobile();
+  
   const serviceAreas = [
     {
       icon: <Factory />,
@@ -34,7 +37,7 @@ const Index = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      if (heroRef.current) {
+      if (heroRef.current && !isMobile) {
         const scrollPosition = window.scrollY;
         const translateY = scrollPosition * 0.5;
         heroRef.current.style.backgroundPositionY = `${translateY}px`;
@@ -46,56 +49,55 @@ const Index = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <Layout>
       {/* Hero Section with Parallax Effect */}
       <div 
         ref={heroRef}
-        className="h-[60vh] bg-cover bg-center flex items-center justify-center relative"
+        className={`${isMobile ? 'h-[40vh]' : 'h-[60vh]'} bg-cover bg-center flex items-center justify-center relative`}
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80')",
-          backgroundAttachment: "fixed" 
+          backgroundImage: "url('/lovable-uploads/55b08a24-3919-411e-9d64-062bec59e585.png')",
+          backgroundAttachment: isMobile ? "scroll" : "fixed" 
         }}
       >
         <div className="absolute inset-0 bg-dark-slate bg-opacity-50"></div>
         <div className="container mx-auto px-6 z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in">וויסטמאַסטער</h1>
-          <p className="text-xl text-white max-w-3xl mx-auto animate-fade-in">פתרונות מתקדמים לפינוי פסולת</p>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס פינוי פסולת ושינוע בע"מ</h1>
+          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto animate-fade-in">פתרונות מתקדמים לפינוי פסולת</p>
         </div>
       </div>
 
       {/* Intro Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-8 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold mb-8 text-center text-dark-slate">ברוכים הבאים לוויסטמאַסטער</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-dark-slate">ברוכים הבאים לאליס פינוי פסולת</h2>
           </ScrollReveal>
           
           <ScrollReveal delay={200}>
-            <p className="text-lg text-center max-w-4xl mx-auto mb-8 leading-relaxed text-dark-slate">
-              אנו בוויסטמאַסטער מספקים פתרונות מובילים בתחום מכונות פינוי הפסולת בישראל. עם ניסיון של למעלה מ-15 שנה, אנו מתמחים באספקת והתקנת מערכות מתקדמות לטיפול בפסולת לכל המגזרים. 
-              הצוות המקצועי שלנו מחויב למצוינות, אמינות ושירות ברמה הגבוהה ביותר.
+            <p className="text-base md:text-lg text-center max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed text-dark-slate">
+              אחראי ומהיר, אליס פינוי פסולת בע"מ לשירותכם! החברה מתמחה בפינוי פסולת קבלנית ופסולת בנייה, פינוי תכולות מבתים, משרדים ומפעלים ומעמידים לרשות לקוחותינו את מערך השירותים המתקדם בתחום בהתבסס על הציוד איכותי והחדשני ביותר בשוק.
             </p>
           </ScrollReveal>
           
           <ScrollReveal delay={400}>
-            <p className="text-lg text-center max-w-4xl mx-auto leading-relaxed text-dark-slate">
-              אנו מאמינים בקידום פתרונות ידידותיים לסביבה ומציעים מגוון רחב של מערכות חדשניות המתוכננות לענות על הצרכים הספציפיים של לקוחותינו, תוך שמירה על הסביבה והובלת מדיניות קיימות.
+            <p className="text-base md:text-lg text-center max-w-4xl mx-auto leading-relaxed text-dark-slate">
+               כחברה מהמובילות את התחום בישראל, אנו מחזיקים באישורים וברישיונות הרלוונטיים ומפנים את הפסולת לאתרי הטמנה מסודרים כנדרש. בנוסף אנו מספקים משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת. זאת ועוד, אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר, בנוסף אנו עובדים עם מוסדות בטחוניים
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Service Areas Section */}
-      <section className="py-16 bg-light-grey">
-        <div className="container mx-auto px-6">
+      <section className="py-8 md:py-16 bg-light-grey">
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold mb-12 text-center text-dark-slate">תחומי שירות</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-dark-slate">תחומי שירות</h2>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {serviceAreas.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -107,7 +109,7 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <ScrollReveal delay={600}>
               <a href="/about" className="inline-flex items-center text-soft-blue hover:text-warm-orange transition-colors duration-300 font-bold text-lg group">
                 <span>למידע נוסף על השירותים שלנו</span>
@@ -119,22 +121,22 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-soft-blue text-white">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-10 md:py-16 bg-soft-blue text-white">
+        <div className="container mx-auto px-4 md:px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold mb-6">מוכנים לשדרג את פתרונות פינוי הפסולת שלכם?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">מוכנים לשדרג את פתרונות פינוי הפסולת שלכם?</h2>
           </ScrollReveal>
           
           <ScrollReveal delay={200}>
-            <p className="text-xl max-w-3xl mx-auto mb-8">
-              הצוות המקצועי שלנו עומד לרשותכם כדי לפתח פתרון מותאם אישית עבור העסק או הארגון שלכם. אנו מחויבים לספק שירות יוצא דופן ופתרונות ברי קיימא שיענו על הצרכים הייחודיים שלכם.
+            <p className="text-lg max-w-3xl mx-auto mb-6 md:mb-8">
+              נשמח לספק לכם שירות ברמה גבוהה ואדיבה שטרם הכרתם
             </p>
           </ScrollReveal>
           
           <ScrollReveal delay={400}>
             <a 
               href="/contact" 
-              className="inline-block bg-white text-soft-blue px-8 py-3 rounded-lg font-bold text-lg hover:bg-warm-orange hover:text-white transition-colors duration-300 shadow-lg"
+              className="inline-block bg-white text-soft-blue px-6 md:px-8 py-3 rounded-lg font-bold text-lg hover:bg-warm-orange hover:text-white transition-colors duration-300 shadow-lg"
             >
               צרו קשר עוד היום
             </a>
