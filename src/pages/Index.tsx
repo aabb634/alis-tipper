@@ -3,11 +3,16 @@ import React, { useEffect, useRef } from 'react';
 import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Truck, Trash2, Recycle, Building, ArrowRight } from 'lucide-react';
+import { Truck, Trash2, Recycle, Building, ArrowRight, Check } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
   const isMobile = useIsMobile();
+  
+  // Reset scroll position when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const serviceAreas = [
     {
@@ -30,6 +35,13 @@ const Index = () => {
       title: "שרוולים ושינוע ציוד",
       description: "אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר"
     }
+  ];
+
+  const whyChooseUs = [
+    "קובעים שעה מראש ומגיעים בטווח השעות שנקבעו ללא איחורים",
+    "שירות מקצועי ואמין",
+    "מחירים נוחים, החל מ700 ש\"ח",
+    "השירות יסופק בכל הערים היישובים מנתניה ועד יבנה"
   ];
 
   // Function to handle the parallax effect
@@ -88,14 +100,38 @@ const Index = () => {
           
           <ScrollReveal delay={400}>
             <p className="text-base md:text-lg text-center max-w-4xl mx-auto leading-relaxed text-dark-slate">
-               כחברה מהמובילות את התחום בישראל, אנו מחזיקים באישורים וברישיונות הרלוונטיים ומפנים את הפסולת לאתרי הטמנה מסודרים כנדרש. בנוסף אנו מספקים משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת. זאת ועוד, אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר, בנוסף אנו עובדים עם מוסדות בטחוניים
+              שירות מקצועי, אחראי ומהיר, אליס פינוי פסולת בע"מ לשירותכם! החברה מתמחה בפינוי פסולת קבלנית ופסולת בנייה, פינוי תכולות מבתים, משרדים ומפעלים ומעמידים לרשות לקוחותינו את מערך השירותים המתקדם בתחום בהתבסס על הציוד איכותי והחדשני ביותר בשוק. כחברה מהמובילות את התחום בישראל, אנו מחזיקים באישורים וברישיונות הרלוונטיים ומפנים את הפסולת לאתרי הטמנה מסודרים כנדרש. בנוסף אנו מספקים משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת. זאת ועוד, אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר, בנוסף אנו עובדים עם מוסדות בטחוניים
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Service Areas Section */}
+      {/* Why Choose Us Section */}
       <section className="py-8 md:py-16 bg-light-grey">
+        <div className="container mx-auto px-4 md:px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-dark-slate">למה לבחור בנו</h2>
+          </ScrollReveal>
+          
+          <div className="max-w-3xl mx-auto">
+            <ul className="space-y-4">
+              {whyChooseUs.map((item, index) => (
+                <ScrollReveal key={index} delay={index * 150}>
+                  <li className="flex items-start bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                    <div className="shrink-0 bg-soft-blue bg-opacity-20 p-1.5 rounded-full mr-3">
+                      <Check className="h-5 w-5 text-soft-blue" />
+                    </div>
+                    <span className="text-dark-slate">{item}</span>
+                  </li>
+                </ScrollReveal>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section */}
+      <section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-dark-slate">תחומי שירות</h2>

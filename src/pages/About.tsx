@@ -1,198 +1,171 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@/components/Layout';
+import { ScrollArea } from "@/components/ui/scroll-area";
 import ScrollReveal from '@/components/ScrollReveal';
-import { Shield, Award, Clock, Users } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Truck, Trash2, Recycle, Building } from 'lucide-react';
 
 const About = () => {
-  const reliabilityFeatures = [
+  // Reset scroll position when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const services = [
     {
-      icon: <Shield className="text-soft-blue w-12 h-12" />,
-      title: "איכות ובטיחות",
-      description: "כל המערכות שלנו עומדות בתקנים המחמירים ביותר של בטיחות ואיכות"
+      icon: <Building className="h-8 w-8 text-soft-blue" />,
+      title: "פינוי פסולת תעשייתית",
+      description: "אנו מספקים שירותי פינוי פסולת תעשייתית מקצועיים ויעילים. הצוות שלנו מצויד בכלים המתאימים לטיפול בכל סוגי הפסולת התעשייתית, תוך הקפדה על תקנות איכות הסביבה."
     },
     {
-      icon: <Award className="text-soft-blue w-12 h-12" />,
-      title: "מומחיות",
-      description: "צוות המהנדסים והטכנאים שלנו הוא בעל ניסיון רב ומומחיות בתחום"
+      icon: <Trash2 className="h-8 w-8 text-soft-blue" />,
+      title: "פינוי פסולת ביתית",
+      description: "שירותי פינוי פסולת ביתית שלנו מותאמים לצרכים של בתים פרטיים, דירות ומתחמי מגורים. אנו מבטיחים פינוי מהיר, יעיל ונקי של כל סוגי הפסולת הביתית."
     },
     {
-      icon: <Clock className="text-soft-blue w-12 h-12" />,
-      title: "שירות 24/7",
-      description: "מערך תמיכה ושירות זמין בכל שעות היממה למענה מהיר לכל תקלה"
+      icon: <Truck className="h-8 w-8 text-soft-blue" />,
+      title: "משאית מנוף",
+      description: "אנו מפעילים צי של משאיות מנוף מתקדמות לפינוי פסולת בניין, גזם ופסולת כבדה אחרת. המשאיות שלנו מאפשרות גישה למקומות קשים ומספקות פתרון יעיל לפינוי כמויות גדולות של פסולת."
     },
     {
-      icon: <Users className="text-soft-blue w-12 h-12" />,
-      title: "ליווי אישי",
-      description: "אנו מלווים כל לקוח באופן אישי, מהייעוץ הראשוני ועד התקנת המערכת ותחזוקתה"
+      icon: <Recycle className="h-8 w-8 text-soft-blue" />,
+      title: "שרוולים ושינוע ציוד",
+      description: "אנו מציעים שירותי השכרת שרוולים לפינוי פסולת בניין ושינוע ציוד מכני כגון בובקטים וציוד הנדסי זעיר אחר. השירותים שלנו מותאמים לצרכי הלקוח ומספקים פתרון מלא לכל צרכי הפינוי והשינוע."
     }
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-soft-blue py-20 text-white">
-        <div className="container mx-auto px-6">
-          <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">אודות אליס מכולות</h1>
-          </ScrollReveal>
-          <ScrollReveal delay={200}>
-            <p className="text-xl max-w-3xl mx-auto text-center">
-              כבר למעלה מ-15 שנה אנו מספקים פתרונות מתקדמים לניהול פסולת בישראל, 
-              בשילוב חדשנות טכנולוגית ומחויבות לשמירה על הסביבה
+      <div className="bg-soft-blue py-12 md:py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">אודות אליס מכולות</h1>
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
+              חברה מובילה בתחום פינוי הפסולת והמכולות בישראל
             </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Company Information */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <ScrollReveal animationType="slide-in">
-                <h2 className="text-3xl font-bold mb-6 text-dark-slate">
-                  הסיפור שלנו
-                </h2>
-              </ScrollReveal>
-              <ScrollReveal animationType="slide-in" delay={200}>
-                <p className="text-lg mb-6 leading-relaxed text-dark-slate">
-                  אליס מכולות נוסדה בשנת 2008 מתוך חזון של קבוצת מהנדסים סביבתיים, 
-                  שזיהו את הצורך בפתרונות מתקדמים וידידותיים לסביבה עבור ניהול פסולת 
-                  בישראל. מתחילה צנועה, גדלנו והפכנו לאחת החברות המובילות בתחום.
-                </p>
-              </ScrollReveal>
-              <ScrollReveal animationType="slide-in" delay={300}>
-                <p className="text-lg mb-6 leading-relaxed text-dark-slate">
-                  היום, אנו גאים לשרת מגוון רחב של לקוחות - מארגונים ממשלתיים וחברות 
-                  גדולות ועד לעסקים קטנים וקהילות מקומיות. המומחיות שלנו משלבת הבנה 
-                  עמוקה של צרכי השוק הישראלי יחד עם פתרונות טכנולוגיים מהמתקדמים בעולם.
-                </p>
-              </ScrollReveal>
-              <ScrollReveal animationType="slide-in" delay={400}>
-                <p className="text-lg leading-relaxed text-dark-slate">
-                  הערכים המובילים אותנו הם מצוינות טכנולוגית, שירות לקוחות יוצא דופן 
-                  ומחויבות לקיימות ולהגנה על הסביבה. אנחנו מאמינים שניתן לשלב בין יעילות 
-                  עסקית לבין אחריות סביבתית, ומדי יום אנו עובדים כדי להוכיח זאת.
-                </p>
-              </ScrollReveal>
-            </div>
-            <div className="order-1 md:order-2">
-              <ScrollReveal>
-                <div className="rounded-lg overflow-hidden shadow-xl">
-                  <img 
-                    src="/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png" 
-                    alt="צוות אליס מכולות" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Mission and Vision */}
-      <section className="py-16 bg-light-grey">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <ScrollReveal>
-                <div className="rounded-lg overflow-hidden shadow-xl">
-                  <img 
-                    src="/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png" 
-                    alt="החזון שלנו" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
-            <div>
-              <ScrollReveal animationType="slide-in">
-                <h2 className="text-3xl font-bold mb-6 text-dark-slate">החזון והמשימה שלנו</h2>
-              </ScrollReveal>
-              <ScrollReveal animationType="slide-in" delay={200}>
-                <h3 className="text-xl font-bold mb-3 text-soft-blue">החזון שלנו</h3>
-                <p className="text-lg mb-6 leading-relaxed text-dark-slate">
-                  אנו שואפים להוביל את המהפכה בתחום ניהול הפסולת בישראל ולהיות 
-                  בחירה ראשונה של ארגונים המחויבים לפתרונות סביבתיים חדשניים. 
-                  החזון שלנו כולל עולם שבו טכנולוגיה וקיימות הולכות יד ביד.
+      {/* About Us Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <ScrollReveal>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-dark-slate">מי אנחנו</h2>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={200}>
+              <div className="prose max-w-none text-dark-slate space-y-4">
+                <p>
+                  אליס מכולות הינה חברה מובילה בתחום פינוי הפסולת והמכולות בישראל. החברה הוקמה מתוך חזון לספק שירותי פינוי פסולת איכותיים, מקצועיים ואמינים לכל סוגי הלקוחות - מבתים פרטיים ועד מפעלי תעשייה גדולים.
                 </p>
-              </ScrollReveal>
-              <ScrollReveal animationType="slide-in" delay={300}>
-                <h3 className="text-xl font-bold mb-3 text-soft-blue">המשימה שלנו</h3>
-                <p className="text-lg mb-6 leading-relaxed text-dark-slate">
-                  המשימה שלנו היא לספק פתרונות מתקדמים לניהול פסולת אשר תורמים 
-                  הן ליעילות התפעולית של לקוחותינו והן לשמירה על הסביבה. 
-                  אנו מחויבים למצוא את האיזון המושלם בין צרכי הלקוח, טכנולוגיה מתקדמת 
-                  ואחריות סביבתית.
+                <p>
+                  הצוות שלנו מורכב מאנשי מקצוע מנוסים ומיומנים, המחויבים לספק את השירות הטוב ביותר ללקוחותינו. אנו משתמשים בציוד המתקדם ביותר בתעשייה כדי להבטיח שכל עבודת פינוי פסולת מתבצעת ביעילות, במהירות ובבטיחות.
                 </p>
-              </ScrollReveal>
-              <ScrollReveal animationType="slide-in" delay={400}>
-                <p className="text-lg leading-relaxed text-dark-slate">
-                  בכל פרויקט, אנו מיישמים גישה של חדשנות מתמדת, מקצועיות חסרת פשרות 
-                  וראייה לטווח ארוך. אנו גאים ביכולתנו לספק פתרונות מותאמים אישית 
-                  העונים על הצרכים הייחודיים של כל לקוח.
-                </p>
-              </ScrollReveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reliability Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold mb-12 text-center text-dark-slate">
-              למה לבחור בנו?
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reliabilityFeatures.map((feature, index) => (
-              <div 
-                key={index} 
-                className="bg-light-grey p-8 rounded-lg shadow-md text-center fade-in-section"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="flex justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-dark-slate">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-grey">
-                  {feature.description}
+                <p>
+                  אנו מחויבים לאיכות הסביבה ופועלים בהתאם לכל התקנות והחוקים הרלוונטיים. הפסולת שאנו מפנים מועברת לאתרי מיחזור והטמנה מורשים, תוך הקפדה על הפרדת פסולת ומיחזור כאשר הדבר אפשרי.
                 </p>
               </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Section */}
+      <section className="py-12 md:py-16 bg-light-grey">
+        <div className="container mx-auto px-4 md:px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-dark-slate">השירותים שלנו</h2>
+          </ScrollReveal>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            {services.map((service, index) => (
+              <ScrollReveal key={index} delay={index * 150}>
+                <Card className="h-full">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col h-full">
+                      <div className="mb-4">{service.icon}</div>
+                      <h3 className="text-xl font-bold mb-2 text-dark-slate">{service.title}</h3>
+                      <p className="text-muted-grey flex-grow">{service.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-16 bg-warm-orange text-white">
-        <div className="container mx-auto px-6 text-center">
+      {/* Our Values Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold mb-6">
-              מוכנים להתחיל?
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-dark-slate">הערכים שלנו</h2>
+          </ScrollReveal>
+          
+          <ScrollArea className="max-h-[500px] max-w-4xl mx-auto pr-4">
+            <div className="space-y-6">
+              <ScrollReveal delay={150}>
+                <div className="border-r-4 border-soft-blue pr-4">
+                  <h3 className="text-xl font-bold mb-2 text-dark-slate">מקצועיות</h3>
+                  <p className="text-muted-grey">
+                    אנו מחויבים לספק שירות מקצועי ברמה הגבוהה ביותר. הצוות שלנו מוכשר ומנוסה, והציוד שלנו הוא המתקדם ביותר בתעשייה.
+                  </p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={300}>
+                <div className="border-r-4 border-soft-blue pr-4">
+                  <h3 className="text-xl font-bold mb-2 text-dark-slate">אמינות</h3>
+                  <p className="text-muted-grey">
+                    אנו מקפידים על עמידה בזמנים ובהתחייבויות שלנו. כשאנחנו אומרים שנגיע בשעה מסוימת, אנחנו מתכוונים לכך.
+                  </p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={450}>
+                <div className="border-r-4 border-soft-blue pr-4">
+                  <h3 className="text-xl font-bold mb-2 text-dark-slate">שירות לקוחות</h3>
+                  <p className="text-muted-grey">
+                    אנו מאמינים בשירות לקוחות מעולה. אנו זמינים לענות על שאלות, לספק מידע ולפתור בעיות בכל עת.
+                  </p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={600}>
+                <div className="border-r-4 border-soft-blue pr-4">
+                  <h3 className="text-xl font-bold mb-2 text-dark-slate">אחריות סביבתית</h3>
+                  <p className="text-muted-grey">
+                    אנו מחויבים לאיכות הסביבה ופועלים בהתאם לכל התקנות והחוקים הרלוונטיים. אנו מקפידים על פינוי פסולת אחראי ומיחזור כאשר הדבר אפשרי.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </ScrollArea>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-10 md:py-16 bg-soft-blue text-white">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <ScrollReveal>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">מוכנים להתחיל?</h2>
           </ScrollReveal>
           
           <ScrollReveal delay={200}>
-            <p className="text-xl max-w-3xl mx-auto mb-8">
-              צוות המומחים שלנו ישמח לענות על כל שאלה ולייעץ לכם לגבי הפתרון 
-              המתאים ביותר לצרכים שלכם. יחד, נוכל לבנות עתיד יותר נקי ויעיל.
+            <p className="text-lg max-w-2xl mx-auto mb-6">
+              צרו איתנו קשר עוד היום לקבלת הצעת מחיר ללא התחייבות עבור שירותי פינוי הפסולת שלנו.
             </p>
           </ScrollReveal>
           
           <ScrollReveal delay={400}>
             <a 
               href="/contact" 
-              className="inline-block bg-white text-warm-orange px-8 py-3 rounded-lg font-bold text-lg hover:bg-soft-blue hover:text-white transition-colors duration-300 shadow-lg"
+              className="inline-block bg-white text-soft-blue px-6 md:px-8 py-3 rounded-lg font-bold text-lg hover:bg-warm-orange hover:text-white transition-colors duration-300 shadow-lg"
             >
-              צרו איתנו קשר
+              צרו קשר עכשיו
             </a>
           </ScrollReveal>
         </div>

@@ -1,9 +1,14 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@/components/Layout';
+import ScrollReveal from '@/components/ScrollReveal';
 import { Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
+  // Reset scroll position when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       {/* Header Section */}

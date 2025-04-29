@@ -1,31 +1,33 @@
-
-import React, { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
-import Layout from "@/components/Layout";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Layout from '@/components/Layout';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const NotFound = () => {
-  const location = useLocation();
-
+  const navigate = useNavigate();
+  
+  // Reset scroll position when component mounts
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Layout>
-      <div className="min-h-[70vh] flex flex-col items-center justify-center bg-light-grey px-4">
-        <div className="text-center animate-fade-in">
-          <h1 className="text-6xl font-bold text-soft-blue mb-4">404</h1>
-          <p className="text-2xl text-dark-slate mb-8">הדף המבוקש לא נמצא</p>
-          <Link
-            to="/"
-            className="bg-soft-blue text-white px-8 py-3 rounded-lg font-bold hover:bg-warm-orange transition-colors duration-300"
+      <div className="flex flex-col items-center justify-center h-screen bg-light-grey">
+        <ScrollReveal>
+          <h1 className="text-4xl font-bold text-dark-slate mb-4">404 - דף לא נמצא</h1>
+        </ScrollReveal>
+        <ScrollReveal delay={200}>
+          <p className="text-lg text-muted-grey mb-8">הדף שחיפשתם לא קיים או הוסר.</p>
+        </ScrollReveal>
+        <ScrollReveal delay={400}>
+          <button
+            onClick={() => navigate(-1)}
+            className="bg-soft-blue hover:bg-warm-orange text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-300"
           >
-            חזרה לדף הבית
-          </Link>
-        </div>
+            חזור אחורה
+          </button>
+        </ScrollReveal>
       </div>
     </Layout>
   );
