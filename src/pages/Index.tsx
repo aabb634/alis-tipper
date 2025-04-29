@@ -58,7 +58,7 @@ const Index = () => {
         ref={heroRef}
         className={`${isMobile ? 'h-[40vh]' : 'h-[60vh]'} bg-cover bg-center flex items-center justify-center relative`}
         style={{ 
-          backgroundImage: "url('/lovable-uploads/f91c8b96-1bf8-4b92-8e22-618f33f78eb9.jpg')",
+          backgroundImage: "url('/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png')",
           backgroundAttachment: isMobile ? "scroll" : "fixed" 
         }}
       >
