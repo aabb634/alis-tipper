@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md py-4 px-6 fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-lg md:text-2xl font-bold text-soft-blue">אליס מכולות</span>
+          <span className="text-lg md:text-2xl font-bold text-soft-blue md:text-2xl sm:text-xl text-soft-blue">אליס מכולות</span>
         </Link>
         
         {/* Mobile menu button */}
@@ -49,7 +49,7 @@ const Navbar = () => {
       
       {/* Mobile Navigation */}
       <div className={cn(
-        "md:hidden fixed left-0 right-0 top-[72px] bg-white shadow-md transition-transform duration-300 ease-in-out transform",
+        "md:hidden fixed left-0 right-0 top-[72px] bg-white shadow-md transition-transform duration-300 ease-in-out transform z-40",
         isOpen ? "translate-y-0" : "-translate-y-full"
       )}>
         <div className="flex flex-col items-center space-y-4 py-4">
