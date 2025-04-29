@@ -58,13 +58,13 @@ const Index = () => {
         ref={heroRef}
         className={`${isMobile ? 'h-[40vh]' : 'h-[60vh]'} bg-cover bg-center flex items-center justify-center relative`}
         style={{ 
-          backgroundImage: "url('http://www.alistipper.co.il/uploads/3/4/6/8/3468954/background-images/1050880456.jpg')",
+          backgroundImage: "url('/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png')",
           backgroundAttachment: isMobile ? "scroll" : "fixed" 
         }}
       >
         <div className="absolute inset-0 bg-dark-slate bg-opacity-50"></div>
         <div className="container mx-auto px-6 z-10 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס פינוי פסולת ושינוע בע"מ</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס מכולות</h1>
           <p className="text-lg md:text-xl text-white max-w-3xl mx-auto animate-fade-in">פתרונות מתקדמים לפינוי פסולת</p>
         </div>
       </div>
@@ -73,7 +73,7 @@ const Index = () => {
       <section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-dark-slate">ברוכים הבאים לאליס פינוי פסולת</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-dark-slate">ברוכים הבאים לאליס מכולות</h2>
           </ScrollReveal>
           
           <ScrollReveal delay={200}>

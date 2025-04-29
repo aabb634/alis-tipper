@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md py-4 px-6 fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-xl md:text-2xl font-bold text-soft-blue">אליס פינוי פסולת ושינוע בע"מ</span>
+          <span className="text-lg md:text-2xl font-bold text-soft-blue">אליס מכולות</span>
         </Link>
         
         {/* Mobile menu button */}
@@ -52,8 +52,6 @@ const Navbar = () => {
         "md:hidden fixed left-0 right-0 top-[72px] bg-white shadow-md transition-transform duration-300 ease-in-out transform",
         isOpen ? "translate-y-0" : "-translate-y-full"
       )}>
-        {/* <div className="navbar"> */}
-
         <div className="flex flex-col items-center space-y-4 py-4">
           <Link to="/" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300" onClick={() => setIsOpen(false)}>
             <Home className="w-5 h-5 ml-2" />
@@ -68,7 +66,6 @@ const Navbar = () => {
             <span className="text-lg">צור קשר</span>
           </Link>
         </div>
-        {/* </div> */}
       </div>
     </nav>
   );

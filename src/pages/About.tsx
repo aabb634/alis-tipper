@@ -81,8 +81,8 @@ const About = () => {
               <ScrollReveal>
                 <div className="rounded-lg overflow-hidden shadow-xl">
                   <img 
-                    src="http://www.alistipper.co.il/uploads/3/4/6/8/3468954/background-images/1050880456.jpg" 
-                    alt="צוות אליס פינוי פסולת" 
+                    src="/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png" 
+                    alt="צוות אליס מכולות" 
                     className="w-full h-auto"
                   />
                 </div>
@@ -100,7 +100,7 @@ const About = () => {
               <ScrollReveal>
                 <div className="rounded-lg overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&q=80" 
+                    src="/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png" 
                     alt="החזון שלנו" 
                     className="w-full h-auto"
                   />

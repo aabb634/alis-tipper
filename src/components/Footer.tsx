@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and description */}
           <div className="text-right">
-            <h3 className="text-xl md:text-2xl font-bold text-soft-blue mb-4">אליס פינוי פסולת ושינוע בע"מ</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-soft-blue mb-4">אליס מכולות</h3>
             <p className="text-sm text-gray-300">
               פתרונות מתקדמים לפינוי פסולת וניהול משאבים סביבתיים למגזר העסקי והתעשייתי
             </p>
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} אליס פינוי פסולת ושינוע בע"מ. כל הזכויות שמורות.</p>
+          <p>© {new Date().getFullYear()} אליס מכולות. כל הזכויות שמורות.</p>
         </div>
       </div>
     </footer>
