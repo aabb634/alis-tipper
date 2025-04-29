@@ -30,7 +30,6 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 flex-row-reverse">
           <Link to="/" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 ml-6">
@@ -53,6 +52,8 @@ const Navbar = () => {
         "md:hidden fixed left-0 right-0 top-[72px] bg-white shadow-md transition-transform duration-300 ease-in-out transform",
         isOpen ? "translate-y-0" : "-translate-y-full"
       )}>
+        {/* <div className="navbar"> */}
+
         <div className="flex flex-col items-center space-y-4 py-4">
           <Link to="/" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300" onClick={() => setIsOpen(false)}>
             <Home className="w-5 h-5 ml-2" />
@@ -67,6 +68,7 @@ const Navbar = () => {
             <span className="text-lg">צור קשר</span>
           </Link>
         </div>
+        {/* </div> */}
       </div>
     </nav>
   );

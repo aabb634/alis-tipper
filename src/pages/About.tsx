@@ -34,7 +34,7 @@ const About = () => {
       <section className="bg-soft-blue py-20 text-white">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">אודות וויסטמאַסטער</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">אודות אליס מכולות</h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl max-w-3xl mx-auto text-center">
@@ -57,7 +57,7 @@ const About = () => {
               </ScrollReveal>
               <ScrollReveal animationType="slide-in" delay={200}>
                 <p className="text-lg mb-6 leading-relaxed text-dark-slate">
-                  וויסטמאַסטער נוסדה בשנת 2008 מתוך חזון של קבוצת מהנדסים סביבתיים, 
+                  אליס מכולות נוסדה בשנת 2008 מתוך חזון של קבוצת מהנדסים סביבתיים, 
                   שזיהו את הצורך בפתרונות מתקדמים וידידותיים לסביבה עבור ניהול פסולת 
                   בישראל. מתחילה צנועה, גדלנו והפכנו לאחת החברות המובילות בתחום.
                 </p>
@@ -81,8 +81,8 @@ const About = () => {
               <ScrollReveal>
                 <div className="rounded-lg overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80" 
-                    alt="צוות וויסטמאַסטער" 
+                    src="http://www.alistipper.co.il/uploads/3/4/6/8/3468954/background-images/1050880456.jpg" 
+                    alt="צוות אליס פינוי פסולת" 
                     className="w-full h-auto"
                   />
                 </div>
