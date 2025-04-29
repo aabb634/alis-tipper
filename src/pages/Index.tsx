@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Trash2, Recycle, Factory, Building, ArrowRight } from 'lucide-react';
+import { Truck, Trash2, Recycle, Building, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
@@ -11,24 +11,24 @@ const Index = () => {
   
   const serviceAreas = [
     {
-      icon: <Factory />,
-      title: "פתרונות תעשייתיים",
-      description: "מערכות מתקדמות לטיפול בפסולת תעשייתית וחומרים מסוכנים"
-    },
-    {
       icon: <Building />,
-      title: "מגזר מסחרי",
-      description: "פתרונות יעילים לפינוי ומחזור פסולת עבור עסקים ומשרדים"
-    },
-    {
-      icon: <Recycle />,
-      title: "מערכות מחזור",
-      description: "מכונות חדשניות למיון וטיפול בחומרים ברי מחזור"
+      title: "פינוי פסולת תעשייתית",
+      description: "פינוי פסולת קבלנית ופסולת בנייה"
     },
     {
       icon: <Trash2 />,
-      title: "פסולת ביתית",
-      description: "פתרונות מותאמים למבני מגורים ופרויקטים קהילתיים"
+      title: "פינוי פסולת ביתית",
+      description: "פינוי תכולות מבתים, משרדים ומפעלים"
+    },
+    {
+      icon: <Truck />,
+      title: "משאית מנוף",
+      description: "אנו מספקים משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת"
+    },
+    {
+      icon: <Recycle />,
+      title: "שרוולים ושינוע ציוד",
+      description: "אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר"
     }
   ];
 
@@ -69,7 +69,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Intro Section */}
+      {/* Intro Section with new headline */}
       <section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
@@ -77,9 +77,13 @@ const Index = () => {
           </ScrollReveal>
           
           <ScrollReveal delay={200}>
-            <p className="text-base md:text-lg text-center max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed text-dark-slate">
-              אחראי ומהיר, אליס פינוי פסולת בע"מ לשירותכם! החברה מתמחה בפינוי פסולת קבלנית ופסולת בנייה, פינוי תכולות מבתים, משרדים ומפעלים ומעמידים לרשות לקוחותינו את מערך השירותים המתקדם בתחום בהתבסס על הציוד איכותי והחדשני ביותר בשוק.
-            </p>
+            <div className="text-base md:text-lg text-center max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed text-dark-slate">
+              <p className="font-bold mb-4">פתרונות מתקדמים לפינוי פסולת, אנו מספקים:</p>
+              <ul className="space-y-2">
+                <li>פינוי פסולת תעשייתית וביתית, משאית מנוף לגזם, פסולת תעשייה ופסולת מעורבת</li>
+                <li>שרוולים ושינוע ציוד- אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני</li>
+              </ul>
+            </div>
           </ScrollReveal>
           
           <ScrollReveal delay={400}>
