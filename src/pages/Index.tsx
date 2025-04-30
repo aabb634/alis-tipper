@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
@@ -80,17 +79,17 @@ const Index = () => {
           backgroundAttachment: isMobile ? "scroll" : "fixed" 
         }}
       >
-        {/* Contact information at top left */}
+        {/* Contact information at top left with clickable links */}
         <div className="absolute top-4 left-4 md:left-8 text-white z-20">
           <div className="flex flex-col items-start space-y-2">
-            <div className="flex items-center">
+            <a href="tel:021234567" className="flex items-center hover:text-warm-orange transition-colors">
               <Phone className="h-4 w-4 mr-2" />
               <span className="text-sm md:text-base">טלפון: 021234567</span>
-            </div>
-            <div className="flex items-center">
+            </a>
+            <a href="mailto:info@alistipper.co.il" className="flex items-center hover:text-warm-orange transition-colors">
               <Mail className="h-4 w-4 mr-2" />
               <span className="text-sm md:text-base">אימייל: info@alistipper.co.il</span>
-            </div>
+            </a>
           </div>
         </div>
         
