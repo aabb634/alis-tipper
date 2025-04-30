@@ -44,6 +44,12 @@ const Index = () => {
     "השירות יסופק בכל הערים היישובים מנתניה ועד יבנה"
   ];
 
+  const mainServices = [
+    "פינוי פסולת תעשייתית וביתית",
+    "משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת",
+    "שרוולים ושינוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר"
+  ];
+
   // Function to handle the parallax effect
   const heroRef = useRef<HTMLDivElement>(null);
   
@@ -77,7 +83,23 @@ const Index = () => {
         <div className="absolute inset-0 bg-dark-slate bg-opacity-50"></div>
         <div className="container mx-auto px-6 z-10 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס מכולות</h1>
-          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto animate-fade-in">פתרונות מתקדמים לפינוי פסולת</p>
+          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto animate-fade-in mb-6">פתרונות מתקדמים לפינוי פסולת</p>
+          
+          {/* Checkmarked list under main title */}
+          <div className="max-w-xl mx-auto">
+            <ul className="space-y-2">
+              {mainServices.map((service, index) => (
+                <ScrollReveal key={index} delay={index * 150}>
+                  <li className="flex items-center justify-center md:justify-start">
+                    <div className="shrink-0 bg-green-500 bg-opacity-20 p-1 rounded-full mr-2">
+                      <Check className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-white text-sm md:text-base">{service}</span>
+                  </li>
+                </ScrollReveal>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

@@ -16,6 +16,11 @@ const Navbar = () => {
     <nav className="bg-white shadow-md py-4 px-6 fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png" 
+            alt="אליס מכולות לוגו" 
+            className="h-8 md:h-10 mr-2 rounded-md" 
+          />
           <span className="text-lg md:text-2xl font-bold text-soft-blue">אליס מכולות</span>
         </Link>
         
