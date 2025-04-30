@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Truck, Trash2, Recycle, Building, ArrowRight, Check } from 'lucide-react';
+import { Truck, Trash2, Recycle, Building, ArrowRight, Check, Phone, Mail } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
@@ -80,6 +80,20 @@ const Index = () => {
           backgroundAttachment: isMobile ? "scroll" : "fixed" 
         }}
       >
+        {/* Contact information at top left */}
+        <div className="absolute top-4 left-4 md:left-8 text-white z-20">
+          <div className="flex flex-col items-start space-y-2">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-2" />
+              <span className="text-sm md:text-base">טלפון: 021234567</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-2" />
+              <span className="text-sm md:text-base">אימייל: info@alistipper.co.il</span>
+            </div>
+          </div>
+        </div>
+        
         <div className="absolute inset-0 bg-dark-slate bg-opacity-50"></div>
         <div className="container mx-auto px-6 z-10 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס מכולות</h1>
