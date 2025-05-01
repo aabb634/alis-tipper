@@ -37,9 +37,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
         backgroundAttachment: isMobile ? "scroll" : "fixed" 
       }}
     >
-      {/* Contact information at top left with clickable links */}
-      <div className="absolute top-4 left-4 md:left-8 text-white z-20">
-        <div className="flex flex-col items-start space-y-2">
+      {/* Contact information - centered on mobile, top left on desktop */}
+      <div className={`absolute ${isMobile ? 'top-3 left-0 right-0 text-center mb-8' : 'top-4 left-4 md:left-8 text-left'} text-white z-20`}>
+        <div className={`flex ${isMobile ? 'flex-col items-center' : 'flex-col items-start'} space-y-2`}>
           <a href="tel:021234567" className="flex items-center hover:text-warm-orange transition-colors">
             <Phone className="h-4 w-4 mr-2" />
             <span className="text-sm md:text-base">טלפון: 021234567</span>
@@ -52,7 +52,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
       </div>
       
       <div className="absolute inset-0 bg-dark-slate bg-opacity-50"></div>
-      <div className="container mx-auto px-6 z-10 text-center">
+      <div className={`container mx-auto px-6 z-10 text-center ${isMobile ? 'pt-16' : ''}`}>
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס מכולות</h1>
         <p className="text-lg md:text-xl text-white max-w-3xl mx-auto animate-fade-in mb-6">פתרונות מתקדמים לפינוי פסולת</p>
         
