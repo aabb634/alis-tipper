@@ -24,7 +24,7 @@ const Footer = () => {
                 <Link to="/" className="text-gray-300 hover:text-soft-blue transition duration-300">דף הבית</Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-soft-blue transition duration-300">אודות</Link>
+                <Link to="/about" className="text-gray-300 hover:text-soft-blue transition duration-300">השירותים שלנו</Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-soft-blue transition duration-300">צור קשר</Link>

@@ -47,6 +47,47 @@
     direction: rtl;
   }
   
+  /* Accessibility: High Contrast Mode */
+  .high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 0%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 0%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
+    --border: 0 0% 100%;
+  }
+  
+  .high-contrast body {
+    @apply bg-black text-white;
+  }
+  
+  .high-contrast .bg-soft-blue {
+    @apply bg-black border border-white;
+  }
+  
+  .high-contrast .bg-light-grey {
+    @apply bg-black;
+  }
+  
+  .high-contrast .text-muted-grey {
+    @apply text-white;
+  }
+  
+  .high-contrast .bg-white {
+    @apply bg-black;
+  }
+  
+  .high-contrast .shadow-md {
+    @apply shadow-white;
+  }
+  
   /* Special classes for animations */
   .fade-in-section {
     opacity: 0;

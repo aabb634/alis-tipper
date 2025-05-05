@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Check, Phone, Mail, Accessibility } from 'lucide-react';
+import { Check, Phone, Mail } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -39,7 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
     >
       {/* Contact information - centered on mobile, top left on desktop */}
       <div className={`absolute ${isMobile ? 'top-3 left-0 right-0 text-center mb-8' : 'top-4 left-4 md:left-8 text-left'} text-white z-20`}>
-        <div className={`flex ${isMobile ? 'flex-col items-center' : 'flex-col items-start'} space-y-2`}>
+        <div className={`flex ${isMobile ? 'flex-col items-center space-y-2' : 'flex-col items-start space-y-2'}`}>
           <a href="tel:021234567" className="flex items-center hover:text-warm-orange transition-colors">
             <Phone className="h-4 w-4 mr-2" />
             <span className="text-sm md:text-base">טלפון: 021234567</span>
@@ -48,14 +48,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
             <Mail className="h-4 w-4 mr-2" />
             <span className="text-sm md:text-base">אימייל: info@alistipper.co.il</span>
           </a>
-          <button 
-            aria-label="הפעל תכונות נגישות" 
-            className="flex items-center hover:text-warm-orange transition-colors"
-            onClick={() => alert('תכונות נגישות יופעלו בקרוב')}
-          >
-            <Accessibility className="h-4 w-4 mr-2" />
-            <span className="text-sm md:text-base">נגישות</span>
-          </button>
         </div>
       </div>
       
