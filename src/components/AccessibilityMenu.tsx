@@ -40,15 +40,10 @@ const AccessibilityMenu = () => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          className="flex items-center text-white hover:text-warm-orange transition-colors"
-          aria-label="תכונות נגישות"
-        >
-          <Accessibility className="h-4 w-4 ml-1" />
-          <span className="text-sm">נגישות</span>
-        </Button>
+        <div className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 cursor-pointer">
+          <Accessibility className="w-5 h-5 ml-2" />
+          <span>נגישות</span>
+        </div>
       </PopoverTrigger>
       <PopoverContent className="w-80 p-4 text-right" align="end">
         <h3 className="font-bold mb-2">הגדרות נגישות</h3>

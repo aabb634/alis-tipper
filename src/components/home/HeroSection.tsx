@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Check, Phone, Mail } from 'lucide-react';
+import { Check, Phone } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -43,10 +43,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
           <a href="tel:021234567" className="flex items-center hover:text-warm-orange transition-colors">
             <Phone className="h-4 w-4 mr-2" />
             <span className="text-sm md:text-base">טלפון: 021234567</span>
-          </a>
-          <a href="mailto:info@alistipper.co.il" className="flex items-center hover:text-warm-orange transition-colors">
-            <Mail className="h-4 w-4 mr-2" />
-            <span className="text-sm md:text-base">אימייל: info@alistipper.co.il</span>
           </a>
         </div>
       </div>

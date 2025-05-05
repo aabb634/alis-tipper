@@ -18,15 +18,27 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png" 
+            src="/lovable-uploads/43b38cb7-e58d-48cb-802a-2b2df479b1f6.png" 
             alt="אליס מכולות לוגו" 
             className="h-8 md:h-10 mr-2 rounded-md" 
           />
           <span className="text-lg md:text-2xl font-bold text-soft-blue">אליס מכולות</span>
         </Link>
         
-        {/* Accessibility Menu - visible on all screen sizes */}
-        <div className="hidden md:block">
+        {/* Desktop Navigation with Accessibility Menu integrated */}
+        <div className="hidden md:flex space-x-6 flex-row-reverse items-center">
+          <Link to="/" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 ml-6">
+            <Home className="w-5 h-5 ml-2" />
+            <span>בית</span>
+          </Link>
+          <Link to="/about" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 ml-6">
+            <Building className="w-5 h-5 ml-2" />
+            <span>השירותים שלנו</span>
+          </Link>
+          <Link to="/contact" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 ml-6">
+            <Phone className="w-5 h-5 ml-2" />
+            <span>צור קשר</span>
+          </Link>
           <AccessibilityMenu />
         </div>
         
@@ -64,22 +76,6 @@ const Navbar = () => {
               </SheetContent>
             </Sheet>
           </div>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 flex-row-reverse">
-          <Link to="/" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 ml-6">
-            <Home className="w-5 h-5 ml-2" />
-            <span>בית</span>
-          </Link>
-          <Link to="/about" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 ml-6">
-            <Building className="w-5 h-5 ml-2" />
-            <span>השירותים שלנו</span>
-          </Link>
-          <Link to="/contact" className="flex items-center text-dark-slate hover:text-soft-blue transition duration-300 ml-6">
-            <Phone className="w-5 h-5 ml-2" />
-            <span>צור קשר</span>
-          </Link>
         </div>
       </div>
     </nav>
