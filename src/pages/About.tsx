@@ -2,12 +2,38 @@
 import React, { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import ServicesImagesSection from '@/components/ServicesImagesSection';
+import { Building, Trash2, Truck, Recycle } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const About = () => {
   // Reset scroll position when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const services = [
+    {
+      icon: <Building className="h-8 w-8 text-soft-blue" />,
+      title: "פינוי פסולת תעשייתית",
+      description: "אנו מספקים שירותי פינוי פסולת תעשייתית מקצועיים ויעילים. הצוות שלנו מצויד בכלים המתאימים לטיפול בכל סוגי הפסולת התעשייתית, תוך הקפדה על תקנות איכות הסביבה"
+    },
+    {
+      icon: <Trash2 className="h-8 w-8 text-soft-blue" />,
+      title: "פינוי פסולת ביתית",
+      description: "שירותי פינוי פסולת ביתית שלנו מותאמים לצרכים של בתים פרטיים, דירות ומתחמי מגורים. אנו מבטיחים פינוי מהיר, יעיל ונקי של כל סוגי הפסולת הביתית"
+    },
+    {
+      icon: <Truck className="h-8 w-8 text-soft-blue" />,
+      title: "משאית מנוף",
+      description: "אנו מפעילים צי של משאיות מנוף מתקדמות לפינוי פסולת בניין, גזם ופסולת כבדה אחרת. המשאיות שלנו מאפשרות גישה למקומות קשים ומספקות פתרון יעיל לפינוי כמויות גדולות של פסולת"
+    },
+    {
+      icon: <Recycle className="h-8 w-8 text-soft-blue" />,
+      title: "שרוולים ושינוע ציוד",
+      description: "אנו מציעים שירותי השכרת שרוולים לפינוי פסולת בניין ושינוע ציוד מכני כגון בובקטים וציוד הנדסי זעיר אחר. השירותים שלנו מותאמים לצרכי הלקוח ומספקים פתרון מלא לכל צרכי הפינוי והשינוע"
+    }
+  ];
 
   return (
     <Layout>
@@ -29,6 +55,21 @@ const About = () => {
             </p>
           </div>
           
+          {/* Services cards section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {services.map((service, index) => (
+              <ScrollReveal key={index} delay={index * 100}>
+                <Card className="h-full">
+                  <CardContent className="p-6 flex flex-col items-center text-center">
+                    <div className="mb-4">{service.icon}</div>
+                    <h3 className="text-lg font-bold mb-2">{service.title}</h3>
+                    <p className="text-muted-grey text-sm">{service.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+          
           {/* Images section */}
           <ServicesImagesSection />
           
@@ -42,7 +83,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Add the additional section with the new images */}
+          {/* Additional images section */}
           <div className="mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="overflow-hidden rounded-lg shadow-md">
