@@ -49,32 +49,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* About Us Section */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <ScrollReveal>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-dark-slate">מי אנחנו</h2>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={200}>
-              <div className="prose max-w-none text-dark-slate space-y-4">
-                <p>
-                  אליס מכולות הינה חברה מובילה בתחום פינוי הפסולת והמכולות בישראל. החברה הוקמה מתוך חזון לספק שירותי פינוי פסולת איכותיים, מקצועיים ואמינים לכל סוגי הלקוחות - מבתים פרטיים ועד מפעלי תעשייה גדולים
-                </p>
-                <p>
-                  הצוות שלנו מורכב מאנשי מקצוע מנוסים ומיומנים, המחויבים לספק את השירות הטוב ביותר ללקוחותינו. אנו משתמשים בציוד המתקדם ביותר בתעשייה כדי להבטיח שכל עבודת פינוי פסולת מתבצעת ביעילות, במהירות ובבטיחות
-                </p>
-                <p>
-                  אנו מחויבים לאיכות הסביבה ופועלים בהתאם לכל התקנות והחוקים הרלוונטיים. הפסולת שאנו מפנים מועברת לאתרי מיחזור והטמנה מורשים, תוך הקפדה על הפרדת פסולת ומיחזור כאשר הדבר אפשרי
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Services Section */}
+      {/* Our Services Section - Now first */}
       <section className="py-12 md:py-16 bg-light-grey">
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
@@ -95,6 +70,31 @@ const About = () => {
                 </Card>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section - Now second */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <ScrollReveal>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-dark-slate">מי אנחנו</h2>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={200}>
+              <div className="prose max-w-none text-dark-slate space-y-4">
+                <p>
+                  אליס מכולות הינה חברה מובילה בתחום פינוי הפסולת והמכולות בישראל. החברה הוקמה מתוך חזון לספק שירותי פינוי פסולת איכותיים, מקצועיים ואמינים לכל סוגי הלקוחות - מבתים פרטיים ועד מפעלי תעשייה גדולים
+                </p>
+                <p>
+                  הצוות שלנו מורכב מאנשי מקצוע מנוסים ומיומנים, המחויבים לספק את השירות הטוב ביותר ללקוחותינו. אנו משתמשים בציוד המתקדם ביותר בתעשייה כדי להבטיח שכל עבודת פינוי פסולת מתבצעת ביעילות, במהירות ובבטיחות
+                </p>
+                <p>
+                  אנו מחויבים לאיכות הסביבה ופועלים בהתאם לכל התקנות והחוקים הרלוונטיים. הפסולת שאנו מפנים מועברת לאתרי מיחזור והטמנה מורשים, תוך הקפדה על הפרדת פסולת ומיחזור כאשר הדבר אפשרי
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

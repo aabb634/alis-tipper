@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Check, Phone, Mail } from 'lucide-react';
+import { Check, Phone, Mail, Accessibility } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -48,6 +48,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
             <Mail className="h-4 w-4 mr-2" />
             <span className="text-sm md:text-base">אימייל: info@alistipper.co.il</span>
           </a>
+          <button 
+            aria-label="הפעל תכונות נגישות" 
+            className="flex items-center hover:text-warm-orange transition-colors"
+            onClick={() => alert('תכונות נגישות יופעלו בקרוב')}
+          >
+            <Accessibility className="h-4 w-4 mr-2" />
+            <span className="text-sm md:text-base">נגישות</span>
+          </button>
         </div>
       </div>
       
