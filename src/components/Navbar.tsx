@@ -22,7 +22,7 @@ const Navbar = () => {
             alt="אליס מכולות לוגו" 
             className="h-8 md:h-10 mr-2 rounded-md" 
           />
-          <span className="text-lg md:text-2xl font-bold text-soft-blue">אליס מכולות</span>
+          <span className="text-sm md:text-2xl font-bold text-soft-blue">אליס מכולות</span>
         </Link>
         
         {/* Desktop Navigation with Accessibility Menu integrated */}
