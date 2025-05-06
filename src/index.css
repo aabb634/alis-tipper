@@ -47,21 +47,21 @@
     direction: rtl;
   }
   
-  /* Accessibility: High Contrast Mode */
+  /* Improved Accessibility: High Contrast Mode */
   .high-contrast {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --card: 0 0% 0%;
     --card-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
+    --primary: 196 80% 60%;
     --primary-foreground: 0 0% 0%;
     --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 0%;
-    --muted-foreground: 0 0% 100%;
-    --accent: 0 0% 100%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 90%;
+    --accent: 30 100% 50%;
     --accent-foreground: 0 0% 0%;
-    --border: 0 0% 100%;
+    --border: 0 0% 40%;
   }
   
   .high-contrast body {
@@ -69,7 +69,9 @@
   }
   
   .high-contrast .bg-soft-blue {
-    @apply bg-black border border-white;
+    background-color: #0078D4; /* Higher contrast blue */
+    color: white;
+    border: 1px solid white;
   }
   
   .high-contrast .bg-light-grey {
@@ -84,8 +86,30 @@
     @apply bg-black;
   }
   
+  .high-contrast .text-dark-slate {
+    @apply text-white;
+  }
+  
   .high-contrast .shadow-md {
-    @apply shadow-white;
+    box-shadow: 0 0 0 1px white;
+  }
+  
+  .high-contrast a:hover {
+    text-decoration: underline;
+  }
+  
+  .high-contrast .bg-green-500 {
+    background-color: #00B140; /* Higher contrast green */
+  }
+  
+  .high-contrast button, 
+  .high-contrast .inline-block {
+    border: 1px solid white;
+  }
+  
+  .high-contrast .hover\:bg-warm-orange:hover {
+    background-color: #FF8000; /* Higher contrast orange */
+    border: 1px solid white;
   }
   
   /* Special classes for animations */
