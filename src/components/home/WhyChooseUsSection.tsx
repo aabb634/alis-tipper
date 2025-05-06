@@ -12,7 +12,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ whyChooseUs }) 
     <section className="py-8 md:py-16 bg-light-grey">
       <div className="container mx-auto px-4 md:px-6">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-dark-slate">למה לבחור בנו</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-dark-slate">למה לבחור בשירותי פינוי הפסולת שלנו</h2>
         </ScrollReveal>
         
         <div className="max-w-3xl mx-auto">

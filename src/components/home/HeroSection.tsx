@@ -49,8 +49,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
       
       <div className="absolute inset-0 bg-dark-slate bg-opacity-50"></div>
       <div className={`container mx-auto px-6 z-10 text-center ${isMobile ? 'pt-16' : ''}`}>
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס מכולות</h1>
-        <p className="text-lg md:text-xl text-white max-w-3xl mx-auto animate-fade-in mb-6">פתרונות מתקדמים לפינוי פסולת</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">אליס מכולות - פינוי פסולת מקצועי</h1>
+        <p className="text-lg md:text-xl text-white max-w-3xl mx-auto animate-fade-in mb-6">פתרונות מתקדמים לפינוי פסולת בניין ותעשייתית באזור המרכז</p>
         
         {/* Checkmarked list under main title */}
         <div className="max-w-xl mx-auto">

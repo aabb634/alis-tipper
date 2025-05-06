@@ -8,7 +8,7 @@ const ServicesImagesSection: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <ScrollReveal>
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-dark-slate">
-            המכולות שלנו
+            מכולות ומשאיות לפינוי פסולת
           </h2>
         </ScrollReveal>
         
@@ -17,13 +17,13 @@ const ServicesImagesSection: React.FC = () => {
             <div className="overflow-hidden rounded-lg shadow-md">
               <img 
                 src="/lovable-uploads/03e082e2-05a9-43ce-896a-8450882003c8.png" 
-                alt="מכולת פסולת מלאה" 
+                alt="מכולות לפינוי פסולת בניין ותעשייתית" 
                 className="w-full h-48 object-cover object-center"
               />
               <div className="p-4 bg-light-grey">
-                <h3 className="font-bold text-lg mb-2">פינוי פסולת תעשייתית</h3>
+                <h3 className="font-bold text-lg mb-2">פינוי פסולת תעשייתית ובניין</h3>
                 <p className="text-muted-grey text-sm">
-                  אנו מספקים מכולות לפינוי פסולת קבלנית ופסולת בנייה בגדלים שונים
+                  אנו מספקים מכולות לפינוי פסולת קבלנית ופסולת בנייה בגדלים שונים לכל פרויקט בנייה
                 </p>
               </div>
             </div>
@@ -33,13 +33,13 @@ const ServicesImagesSection: React.FC = () => {
             <div className="overflow-hidden rounded-lg shadow-md">
               <img 
                 src="/lovable-uploads/a47c61d1-0cd5-4583-80fd-73838b2c2afb.png" 
-                alt="מכולת פסולת כחולה" 
+                alt="משאית מנוף לפינוי פסולת בניין וגזם" 
                 className="w-full h-48 object-cover object-center"
               />
               <div className="p-4 bg-light-grey">
-                <h3 className="font-bold text-lg mb-2">משאית מנוף לפסולת</h3>
+                <h3 className="font-bold text-lg mb-2">משאית מנוף לפינוי פסולת</h3>
                 <p className="text-muted-grey text-sm">
-                  אנו מספקים משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת
+                  אנו מספקים משאית מנוף לפינוי גזם, פסולת תעשייה, ופסולת בניין מכל סוג
                 </p>
               </div>
             </div>

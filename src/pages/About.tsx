@@ -39,19 +39,19 @@ const About = () => {
     <Layout>
       <div className="py-12 md:py-16 bg-light-grey">
         <div className="container mx-auto px-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">השירותים שלנו</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">שירותי פינוי פסולת מקצועיים באזור המרכז</h1>
           
           <div className="bg-white shadow-md rounded-lg p-6 md:p-8 mb-8">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-soft-blue">שירותי פינוי פסולת</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-soft-blue">פתרונות מתקדמים לפינוי פסולת בניין ותעשייתית</h2>
             <p className="mb-6">
               חברת אליס מכולות מתמחה בפינוי פסולת קבלנית ופסולת בנייה, פינוי תכולות מבתים, 
               משרדים ומפעלים ומעמידים לרשות לקוחותינו את מערך השירותים המתקדם בתחום בהתבסס 
               על הציוד איכותי והחדשני ביותר בשוק.
             </p>
             <p>
-              כחברה מהמובילות את התחום בישראל, אנו מחזיקים באישורים וברישיונות הרלוונטיים 
+              כחברה מהמובילות בתחום פינוי הפסולת בישראל, אנו מחזיקים באישורים וברישיונות הרלוונטיים 
               ומפנים את הפסולת לאתרי הטמנה מסודרים כנדרש. אנו מציעים מגוון רחב של פתרונות 
-              לכל צרכי הפינוי שלכם.
+              לכל צרכי הפינוי שלכם באזור המרכז, מנתניה ועד יבנה.
             </p>
           </div>
           
@@ -74,12 +74,12 @@ const About = () => {
           <ServicesImagesSection />
           
           <div className="bg-white shadow-md rounded-lg p-6 md:p-8 mt-8">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-soft-blue">מי אנחנו</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-soft-blue">מי אנחנו - אליס פינוי פסולת</h2>
             <p className="mb-6">
               אליס פינוי פסולת בע"מ לשירותכם! החברה מתמחה בפינוי פסולת קבלנית ופסולת בנייה, פינוי תכולות מבתים, משרדים ומפעלים ומעמידים לרשות לקוחותינו את מערך השירותים המתקדם בתחום בהתבסס על הציוד איכותי והחדשני ביותר בשוק
             </p>
             <p>
-              כחברה מהמובילות את התחום בישראל, אנו מחזיקים באישורים וברישיונות הרלוונטיים ומפנים את הפסולת לאתרי הטמנה מסודרים כנדרש. בנוסף אנו מספקים משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת. זאת ועוד, אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר.
+              כחברה מהמובילות את תחום פינוי הפסולת באזור המרכז, אנו מחזיקים באישורים וברישיונות הרלוונטיים ומפנים את הפסולת לאתרי הטמנה מסודרים כנדרש. בנוסף אנו מספקים משאית מנוף לגזם, לפסולת תעשייה, ופסולת מעורבת. זאת ועוד, אנו מציעים שרוולים להשכרה ואף מספקים שנוע ציוד מכני כגון בובקטים ועוד ציוד הנדסי זעיר.
             </p>
           </div>
 
@@ -89,14 +89,14 @@ const About = () => {
               <div className="overflow-hidden rounded-lg shadow-md">
                 <img 
                   src="/lovable-uploads/03e082e2-05a9-43ce-896a-8450882003c8.png" 
-                  alt="מכולת פינוי פסולת" 
+                  alt="מכולת פינוי פסולת לאתרי בנייה" 
                   className="w-full h-48 object-cover object-center"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md">
                 <img 
                   src="/lovable-uploads/a47c61d1-0cd5-4583-80fd-73838b2c2afb.png" 
-                  alt="פינוי פסולת בניין" 
+                  alt="פינוי פסולת בניין עם משאית מנוף" 
                   className="w-full h-48 object-cover object-center"
                 />
               </div>
