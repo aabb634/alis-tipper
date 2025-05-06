@@ -16,7 +16,7 @@ const ServicesImagesSection: React.FC = () => {
           <ScrollReveal delay={100}>
             <div className="overflow-hidden rounded-lg shadow-md">
               <img 
-                src="/alis-tipper/alis-tipper/03e082e2-05a9-43ce-896a-8450882003c8.png" 
+                src="/alis-tipper/03e082e2-05a9-43ce-896a-8450882003c8.png" 
                 alt="מכולות לפינוי פסולת בניין ותעשייתית"  
                 className="w-full h-48 object-cover object-center"
               />
