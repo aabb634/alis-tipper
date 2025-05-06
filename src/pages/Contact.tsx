@@ -36,7 +36,7 @@ const Contact = () => {
                 <div className="bg-soft-blue p-4 rounded-full text-white mb-6 glowing-effect">
                   <Mail className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-dark-slate">דוא"ל לתיאום פינוי פסולת</h3>
+                <h3 className="text-xl font-bold mb-3 text-dark-slate">דוא"ל</h3>
                 <a href="mailto:info@alistipper.co.il" className="text-soft-blue hover:text-warm-orange transition-colors duration-300 text-lg font-bold">
                   info@alistipper.co.il
                 </a>
@@ -47,7 +47,7 @@ const Contact = () => {
                 <div className="bg-soft-blue p-4 rounded-full text-white mb-6 glowing-effect">
                   <Phone className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-dark-slate">טלפון להזמנת מכולה</h3>
+                <h3 className="text-xl font-bold mb-3 text-dark-slate">טלפון</h3>
                 <a href="tel:021234567" className="text-soft-blue hover:text-warm-orange transition-colors duration-300 text-lg font-bold">
                   02-1234567
                 </a>

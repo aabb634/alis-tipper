@@ -71,7 +71,7 @@ const About = () => {
           </div>
           
           {/* Images section */}
-          <ServicesImagesSection />
+          {/* <ServicesImagesSection /> */}
           
           <div className="bg-white shadow-md rounded-lg p-6 md:p-8 mt-8">
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-soft-blue">מי אנחנו - אליס פינוי פסולת</h2>
