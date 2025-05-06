@@ -33,7 +33,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ mainServices }) => {
       ref={heroRef}
       className={`${isMobile ? 'h-[40vh]' : 'h-[60vh]'} bg-cover bg-center flex items-center justify-center relative`}
       style={{ 
-        backgroundImage: "url('/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png')",
+        backgroundImage: "url('/alis-tipper/lovable-uploads/a311ffbb-c09b-41a1-9b3d-701df176447e.png')",
         backgroundAttachment: isMobile ? "scroll" : "fixed" 
       }}
     >
