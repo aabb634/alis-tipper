@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
+import { Link } from 'react-router-dom';
 
 const CTASection: React.FC = () => {
   return (
@@ -17,12 +18,12 @@ const CTASection: React.FC = () => {
         </ScrollReveal>
         
         <ScrollReveal delay={400}>
-          <a 
-            href="/contact" 
-            className="inline-block bg-white text-soft-blue px-6 md:px-8 py-3 rounded-lg font-bold text-lg hover:bg-warm-orange hover:text-white transition-colors duration-300 shadow-lg"
-          >
-            הזמנת מכולה לפינוי פסולת
-          </a>
+        <Link 
+          to="/contact" 
+          className="inline-block bg-white text-soft-blue px-6 md:px-8 py-3 rounded-lg font-bold text-lg hover:bg-warm-orange hover:text-white transition-colors duration-300 shadow-lg"
+        >
+          הזמנת מכולה לפינוי פסולת
+        </Link>
         </ScrollReveal>
       </div>
     </section>
