@@ -36,11 +36,11 @@ const Footer = () => {
           <div className="text-right">
             <h4 className="text-lg font-bold mb-4 text-white">צור קשר</h4>
             <div className="flex items-center mb-2 justify-end">
-              <span className="text-gray-300">info@alistipper.co.il</span>
+              <span className="text-gray-300">alistipper@gmail.com</span>
               <Mail className="w-5 h-5 text-soft-blue mr-2" />
             </div>
             <div className="flex items-center mb-2 justify-end">
-              <span className="text-gray-300">02-1234567</span>
+              <span className="text-gray-300">054-9253340</span>
               <Phone className="w-5 h-5 text-soft-blue mr-2" />
             </div>
           </div>

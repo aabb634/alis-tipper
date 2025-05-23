@@ -37,8 +37,8 @@ const Contact = () => {
                   <Mail className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-dark-slate">דוא"ל</h3>
-                <a href="mailto:info@alistipper.co.il" className="text-soft-blue hover:text-warm-orange transition-colors duration-300 text-lg font-bold">
-                  info@alistipper.co.il
+                <a href="mailto:alistipper@gmail.com" className="text-soft-blue hover:text-warm-orange transition-colors duration-300 text-lg font-bold">
+                  alistipper@gmail.com
                 </a>
               </div>
               
@@ -48,8 +48,8 @@ const Contact = () => {
                   <Phone className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-dark-slate">טלפון</h3>
-                <a href="tel:021234567" className="text-soft-blue hover:text-warm-orange transition-colors duration-300 text-lg font-bold">
-                  02-1234567
+                <a href="tel:0549253340" className="text-soft-blue hover:text-warm-orange transition-colors duration-300 text-lg font-bold">
+                  054-9253340
                 </a>
                 <p className="text-muted-grey mt-2">
                   זמינים: א'-ה', 09:00-17:00
@@ -76,8 +76,8 @@ const Contact = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">מחירים אטרקטיביים לפינוי פסולת החל מ-700 ש"ח</h2>
           <p className="mb-6 text-lg">התקשרו עכשיו לקבלת הצעת מחיר משתלמת לפינוי פסולת</p>
-          <a href="tel:021234567" className="inline-block bg-white text-soft-blue px-6 py-3 rounded-lg font-bold text-lg hover:bg-warm-orange hover:text-white transition-colors duration-300">
-            חייגו עכשיו: 02-1234567
+          <a href="tel:0549253340" className="inline-block bg-white text-soft-blue px-6 py-3 rounded-lg font-bold text-lg hover:bg-warm-orange hover:text-white transition-colors duration-300">
+            חייגו עכשיו: 054-9253340
           </a>
         </div>
       </section>
