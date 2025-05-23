@@ -16,7 +16,7 @@ const ServicesImagesSection: React.FC = () => {
           <ScrollReveal delay={100}>
             <div className="overflow-hidden rounded-lg shadow-md">
               <img 
-                src="/alis-tipper/03e082e2-05a9-43ce-896a-8450882003c8.png" 
+                src="/03e082e2-05a9-43ce-896a-8450882003c8.png" 
                 alt="מכולות לפינוי פסולת בניין ותעשייתית"  
                 className="w-full h-48 object-cover object-center"
               />
@@ -32,7 +32,7 @@ const ServicesImagesSection: React.FC = () => {
           <ScrollReveal delay={200}>
             <div className="overflow-hidden rounded-lg shadow-md">
               <img 
-                src="/alis-tipper/alis-tipper/a47c61d1-0cd5-4583-80fd-73838b2c2afb.png" 
+                src="/a47c61d1-0cd5-4583-80fd-73838b2c2afb.png" 
                 alt="משאית מנוף לפינוי פסולת בניין וגזם" 
                 className="w-full h-48 object-cover object-center"
               />

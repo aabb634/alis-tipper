@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/alis-tipper/alis-tipper-image.png" 
+            src="/alis-tipper-image.png" 
             alt="אליס מכולות לוגו" 
             className="h-8 md:h-10 mr-2 rounded-md" 
           />
