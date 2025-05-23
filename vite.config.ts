@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 const repoName = "alis-tipper"; 
 
 export default defineConfig(({ mode }) => ({
-  base: `/${repoName}/`, // 👈 REQUIRED for GitHub Pages
+  base: `/`, // 👈 REQUIRED for GitHub Pages
   server: {
     host: "::",
     port: 8080,
